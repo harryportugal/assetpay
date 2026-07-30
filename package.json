@@ -1,5 +1,5 @@
 {
-  "name": "asset-gateway",
+  "name": "assetpay",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -21,7 +21,6 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.2",
     "@tailwindcss/vite": "^4.3.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
