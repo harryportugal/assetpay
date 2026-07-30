@@ -1039,13 +1039,13 @@ function App() {
               whileInView="show"
               viewport={vp}
               
-              className="w-full max-w-[580px] mx-auto text-center flex flex-col items-center justify-center relative z-10">
+              className="w-full max-w-[850px] mx-auto text-center flex flex-col items-center justify-center relative z-10">
 
               
               {/* Title */}
-              <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-5">
-                <span>Tecnologia pensada para</span>
-                <span className="block mt-1 text-shine font-normal">performance e estabilidade.</span>
+              <motion.h2 variants={fadeUp} className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] font-normal text-[#F5F5F7] tracking-tight leading-[1.1] mb-5">
+                <span className="block sm:inline whitespace-normal sm:whitespace-nowrap">Tecnologia pensada para</span>{" "}
+                <span className="block mt-1 text-shine font-normal whitespace-normal sm:whitespace-nowrap">performance e estabilidade.</span>
               </motion.h2>
 
               {/* Description */}
@@ -1513,17 +1513,14 @@ function App() {
           
           className="w-full bg-[#09090B] border-b border-[#24242A] px-6 md:px-[52px] py-20 md:py-28 flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 relative z-20">
           {/* Left Column: Heading */}
-          <motion.div variants={fadeUp} className="flex-1 text-left max-w-[620px]">
+          <motion.div variants={fadeUp} className="flex-1 text-left max-w-[500px]">
             <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08]">
-              <span>Venda hoje.</span>
-              <span className="block mt-1">
-                Receba com{" "}
-                <span className="relative inline-block px-1.5 font-normal">
-                  previsibilidade.
-                  <svg className="absolute -inset-x-2.5 -inset-y-3.5 w-[calc(100%+20px)] h-[calc(100%+28px)] text-[#3F6DF7] pointer-events-none select-none" viewBox="0 0 100 100" fill="none" preserveAspectRatio="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3,48 C10,12 85,8 96,44 C100,78 30,95 8,82 C-5,72 5,30 35,22" stroke="currentColor" strokeWidth="2.5" />
-                  </svg>
-                </span>
+              Venda hoje. Receba com{" "}
+              <span className="relative inline-block px-1.5 font-normal">
+                previsibilidade.
+                <svg className="absolute -inset-x-2.5 -inset-y-3.5 w-[calc(100%+20px)] h-[calc(100%+28px)] text-[#3F6DF7] pointer-events-none select-none" viewBox="0 0 100 100" fill="none" preserveAspectRatio="none" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3,48 C10,12 85,8 96,44 C100,78 30,95 8,82 C-5,72 5,30 35,22" stroke="currentColor" strokeWidth="2.5" />
+                </svg>
               </span>
             </h2>
           </motion.div>
@@ -1822,9 +1819,8 @@ function App() {
             viewport={vp}
             
             className="flex flex-col items-center mb-16 relative z-10">
-            <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] text-center max-w-[850px] mx-auto tracking-tight leading-[1.08] mb-4">
-              <span>Performance que vira</span>
-              <span className="block mt-1 font-normal">reconhecimento.</span>
+            <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] text-center max-w-[720px] mx-auto tracking-tight leading-[1.08] mb-4">
+              Performance que vira reconhecimento.
             </motion.h2>
             <motion.p variants={fadeUp} className="text-[14px] md:text-[15px] text-[#F5F5F7] text-center max-w-[580px] mx-auto leading-relaxed">
               Na Asset, resultados não passam despercebidos. Quem escala, bate metas e constrói números consistentes recebe placas oficiais de premiação — um reconhecimento tangível da performance que transforma vendas em crescimento real.
@@ -2289,8 +2285,7 @@ function App() {
             {/* Left Column: FAQ Copy */}
             <motion.div variants={fadeUp} className="flex flex-col text-left items-start lg:sticky lg:top-24">
               <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-6">
-                <span>Perguntas</span>
-                <span className="block text-shine font-normal mt-1">Frequentes.</span>
+                Perguntas <span className="text-shine font-normal">Frequentes.</span>
               </h2>
               <p className="text-[14px] md:text-[15.5px] text-[#F5F5F7] leading-relaxed">
                 Tudo o que você precisa saber sobre as taxas, aprovação e funcionamento da Asset.
