@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #09090B;
+  --bg-secondary: #111114;
+  --border-color: #24242A;
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1AA;
+  --blue-primary: #3F6DF7;
+  --blue-light: #5C84FF;
+  --blue-dark: #2E58F2;
+  --btn-gradient: linear-gradient(90deg, #2E58F2 0%, #3F6DF7 52%, #5C84FF 100%);
+  --ease-premium: cubic-bezier(.22,.61,.36,1);
+  --duration-premium: 250ms;
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Premium Styles following Asset Pay DS */
+.font-hero {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 768px) {
+  .font-hero {
+    font-size: 32px;
+    line-height: 94%;
+  }
+}
+
+.font-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .font-subtitle {
+    font-size: 13px;
+  }
+}
+
+.btn-premium-hero {
+  height: 56px;
+  border-radius: 999px;
+  background: var(--btn-gradient);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 28px;
+  padding-right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all var(--duration-premium) var(--ease-premium);
+  box-shadow: 0 10px 35px rgba(60,110,255,.30);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .btn-premium-hero {
+    height: 48px;
+    font-size: 15px;
+    padding-left: 22px;
+    padding-right: 11px;
+  }
+}
+
+.btn-premium-hero:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(60,110,255,.45), 0 0 25px rgba(63, 109, 247, 0.3);
+}
+
+.btn-premium-hero:active {
+  transform: scale(0.98);
+}
+
+/* Feature pills style */
+.card-premium-pill {
+  height: 60px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.04);
+  transition: all var(--duration-premium) var(--ease-premium);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .card-premium-pill {
+    height: 72px;
+    padding: 0 24px;
+  }
+}
+
+.card-premium-pill:hover {
+  transform: scale(1.02);
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 20px rgba(63, 109, 247, 0.12), 0 0 0 1px rgba(255,255,255,.08);
+}
+
+/* Custom premium elements */
+.premium-glow-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(63, 109, 247, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom Scrollbar for dashboard/tables */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Diagonal Hatching Pattern for margins */
+.bg-hatching {
+  background-color: #09090B;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 12px,
+    #1a1a22 12px,
+    #1a1a22 13px
+  );
+}
+
+/* Metallic text shine shimmer effect */
+@keyframes textShine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.text-shine {
+  background: linear-gradient(
+    110deg,
+    #3F6DF7 35%,
+    #3F6DF7 44%,
+    #FFFFFF 50%,
+    #3F6DF7 56%,
+    #3F6DF7 65%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 5.5s linear infinite;
+}
+
+/* Button Shimmer Effect */
+@keyframes btnShimmer {
+  0% {
+    left: -60%;
+  }
+  30% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: btnShimmer 5.5s infinite linear;
+  pointer-events: none;
+}
