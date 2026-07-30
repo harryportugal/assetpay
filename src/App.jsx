@@ -1332,8 +1332,13 @@ function App() {
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   className="bg-[#111114]/95 rounded-xl p-3 flex items-center gap-2.5 shadow-lg z-20"
                 >
-                  {/* Status Indicator Blue dot */}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3F6DF7] shrink-0 animate-pulse" />
+                  {/* Official Asset Pay Logo Icon */}
+                  <div className="w-6 h-6 rounded-md bg-[#3F6DF7] flex items-center justify-center shrink-0 shadow-sm">
+                    <svg width="12" height="12" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 5L26 15H20L16 11L12 15H6L16 5Z" fill="#FFFFFF" />
+                      <path d="M16 15L26 25H20L16 21L12 25H6L16 15Z" fill="#FFFFFF" />
+                    </svg>
+                  </div>
                   <div className="flex-1 text-left leading-tight">
                     <div className="flex justify-between items-center text-[8.5px]">
                       <span className="font-bold text-[#F5F5F7]">Asset</span>
