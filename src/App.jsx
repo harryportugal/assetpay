@@ -1823,8 +1823,8 @@ function App() {
               <span>Performance que vira</span>{" "}
               <span className="text-shine font-normal">reconhecimento.</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-[14px] md:text-[15px] text-[#F5F5F7] text-center max-w-[580px] mx-auto leading-relaxed">
-              Na Asset, resultados não passam despercebidos. Quem escala, bate metas e constrói números consistentes recebe placas oficiais de premiação — um reconhecimento tangível da performance que transforma vendas em crescimento real.
+            <motion.p variants={fadeUp} className="text-[14px] md:text-[15px] text-[#F5F5F7] text-center max-w-[660px] mx-auto leading-relaxed">
+              Na Asset, resultados não passam despercebidos. Quem escala, bate metas e constrói números consistentes recebe placas oficiais de premiação — um reconhecimento tangível da performance que transforma vendas em crescimento&nbsp;real.
             </motion.p>
           </motion.div>
 
