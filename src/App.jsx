@@ -355,12 +355,12 @@ function App() {
 
   return (
     <>
-      {/* Mobile Block Screen (Displays dash mobile.png on mobile viewports < 768px) */}
-      <div className="fixed inset-0 z-[9999] bg-[#09090B] flex items-center justify-center md:hidden p-6 overflow-hidden">
+      {/* Mobile Block Screen (ONLY Logo displayed on mobile viewports < 768px) */}
+      <div className="fixed inset-0 z-[9999] bg-[#09090B] flex items-center justify-center md:hidden p-6 select-none pointer-events-none">
         <img 
-          src="/dash mobile.png" 
-          alt="Asset Mobile Dashboard" 
-          className="w-full max-w-[380px] max-h-[90vh] object-contain drop-shadow-2xl pointer-events-none select-none" 
+          src="/logo asset.png" 
+          alt="Asset Logo" 
+          className="w-48 max-w-[70vw] h-auto object-contain" 
         />
       </div>
 
