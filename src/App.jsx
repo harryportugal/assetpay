@@ -1820,7 +1820,8 @@ function App() {
             
             className="flex flex-col items-center mb-16 relative z-10">
             <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] text-center max-w-[720px] mx-auto tracking-tight leading-[1.08] mb-4">
-              Performance que vira reconhecimento.
+              <span>Performance que vira</span>{" "}
+              <span className="text-shine font-normal">reconhecimento.</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-[14px] md:text-[15px] text-[#F5F5F7] text-center max-w-[580px] mx-auto leading-relaxed">
               Na Asset, resultados não passam despercebidos. Quem escala, bate metas e constrói números consistentes recebe placas oficiais de premiação — um reconhecimento tangível da performance que transforma vendas em crescimento real.
