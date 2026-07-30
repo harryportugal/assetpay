@@ -1949,7 +1949,7 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className={`w-9 h-9 rounded-full ${dep.bg} flex items-center justify-center text-[13px] font-bold shrink-0`}>
+                      <div className="w-8 h-8 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[12px] select-none shadow-sm">
                         {dep.initials}
                       </div>
                       <div className="flex flex-col text-left leading-tight">
@@ -2062,7 +2062,7 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className={`w-9 h-9 rounded-full ${dep.bg} flex items-center justify-center text-[13px] font-bold shrink-0`}>
+                      <div className="w-8 h-8 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[12px] select-none shadow-sm">
                         {dep.initials}
                       </div>
                       <div className="flex flex-col text-left leading-tight">
