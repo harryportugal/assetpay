@@ -355,12 +355,12 @@ function App() {
 
   return (
     <>
-      {/* Mobile Block Screen (ONLY Logo displayed on mobile viewports < 768px) */}
-      <div className="fixed inset-0 z-[9999] bg-[#09090B] flex items-center justify-center md:hidden p-6">
+      {/* Mobile Block Screen (Displays dash mobile.png on mobile viewports < 768px) */}
+      <div className="fixed inset-0 z-[9999] bg-[#09090B] flex items-center justify-center md:hidden p-6 overflow-hidden">
         <img 
-          src="/logo asset.png" 
-          alt="Asset Logo" 
-          className="w-48 max-w-[80vw] h-auto object-contain" 
+          src="/dash mobile.png" 
+          alt="Asset Mobile Dashboard" 
+          className="w-full max-w-[380px] max-h-[90vh] object-contain drop-shadow-2xl pointer-events-none select-none" 
         />
       </div>
 
@@ -1949,8 +1949,8 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[12px] select-none shadow-sm">
-                        {dep.initials}
+                      <div className="w-7 h-7 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[13.5px] select-none shadow-sm">
+                        A
                       </div>
                       <div className="flex flex-col text-left leading-tight">
                         <span className="text-[#F5F5F7] font-semibold text-[14px]">{dep.name}</span>
@@ -2062,8 +2062,8 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[12px] select-none shadow-sm">
-                        {dep.initials}
+                      <div className="w-7 h-7 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[13.5px] select-none shadow-sm">
+                        A
                       </div>
                       <div className="flex flex-col text-left leading-tight">
                         <span className="text-[#F5F5F7] font-semibold text-[14px]">{dep.name}</span>
