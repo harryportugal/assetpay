@@ -589,27 +589,31 @@ function App() {
             <div className="absolute top-[-20%] right-[-50%] w-[450px] h-[400px] bg-[#3F6DF7] opacity-[0.52] blur-[110px] rounded-full pointer-events-none" />
             <div className="absolute bottom-[-15%] right-[20%] w-[580px] h-[500px] bg-[#2E58F2] opacity-[0.55] blur-[120px] rounded-full pointer-events-none" />
 
-            <div className="absolute lg:top-[0px] lg:right-[-52px] lg:h-[85%] lg:w-[calc(91%+52px)] top-[4%] bottom-0 right-[0px] w-[88%] h-[96%] bg-[#08090D] rounded-[20px] lg:rounded-l-[20px] lg:rounded-r-none border border-[#1E2538] shadow-[0_25px_60px_rgba(0,0,0,0.8),_0_0_0_1px_rgba(255,255,255,.05)] overflow-hidden flex flex-col z-0">
+            <div className="absolute lg:top-[0px] lg:right-[-52px] lg:h-[85%] lg:w-[calc(91%+52px)] top-[4%] bottom-0 right-[0px] w-[88%] h-[96%] bg-[#09090B] rounded-[20px] lg:rounded-l-[20px] lg:rounded-r-none border border-[#24242A] shadow-[0_25px_60px_rgba(0,0,0,0.6),_0_0_0_1px_rgba(255,255,255,.04)] overflow-hidden flex flex-col z-0">
               
-              {/* Header Bar (Full width, dark slate border) */}
-              <div className="h-[44px] bg-[#0C0F19] border-b border-[#1E2538] flex items-center justify-between px-4 shrink-0 select-none">
-                {/* Left side header (Logo & Brand) */}
-                <div className="w-[24%] flex items-center gap-2 pr-4 border-r border-[#1E2538] h-full">
+              {/* Header Bar (Full width, dividing line) */}
+              <div className="h-[44px] bg-[#111114] border-b border-[#24242A] flex items-center justify-between px-4 shrink-0 select-none">
+                {/* Left side header (Sidebar section) */}
+                <div className="w-[22%] flex items-center justify-between pr-4 border-r border-[#24242A] h-full">
+                  {/* Logo Symbol */}
                   <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 4L28 16H20L16 12L12 16H4L16 4Z" fill="#FFFFFF" />
+                    <path d="M16 4L28 16H20L16 12L12 16H4L16 4Z" fill="#F5F5F7" />
                     <path d="M16 14L28 26H20L16 22L12 26H4L16 14Z" fill="#3F6DF7" />
                   </svg>
-                  <span className="font-extrabold text-[#F5F5F7] text-[13px] tracking-tight">asset</span>
+                  {/* Hamburger menu */}
+                  <Menu className="w-3.5 h-3.5 text-[#F5F5F7]" />
                 </div>
                 
                 {/* Right side header (Main panel section) */}
-                <div className="flex-1 flex items-center justify-between pl-4">
-                  <div className="flex items-center gap-2 font-semibold text-[#F5F5F7] text-[11px]">
-                    <span className="text-[#8FA0BE] text-[10px]">Visão Geral</span>
-                  </div>
-                  {/* DE Avatar Badge */}
-                  <div className="w-6 h-6 rounded-full bg-[#3F6DF7] text-white text-[9px] font-black flex items-center justify-center shadow-sm">
-                    DE
+                <div className="flex-1 flex items-center pl-4">
+                  <div className="flex items-center gap-1.5 font-semibold text-[#F5F5F7] text-[11px]">
+                    {/* Three vertical bars icon */}
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#F5F5F7]">
+                      <line x1="18" y1="20" x2="18" y2="10" />
+                      <line x1="12" y1="20" x2="12" y2="4" />
+                      <line x1="6" y1="20" x2="6" y2="14" />
+                    </svg>
+                    <span>Dashboard</span>
                   </div>
                 </div>
               </div>
@@ -617,109 +621,270 @@ function App() {
               {/* Content Body (Split vertically below header) */}
               <div className="flex-1 flex overflow-hidden">
                 {/* Sidebar below header */}
-                <div className="w-[24%] border-r border-[#1E2538] bg-[#0C0F19] p-3 flex flex-col gap-3 shrink-0">
-                  {/* Quick Action Item 1 */}
-                  <div className="flex items-center gap-2 bg-[#121624] border border-[#1E2538] rounded-lg p-2 text-[#F5F5F7] text-[9.5px] font-medium">
-                    <span className="text-[#3F6DF7] text-[11px]">✦</span>
-                    <span>Saque</span>
-                  </div>
-                  {/* Quick Action Item 2 */}
-                  <div className="flex items-center gap-2 bg-[#121624]/60 border border-[#1E2538]/60 rounded-lg p-2 text-[#94A3B8] text-[9.5px]">
-                    <span className="text-[10px]">↗</span>
-                    <span>Visão Geral</span>
-                  </div>
-                  {/* Quick Action Item 3 */}
-                  <div className="flex items-center gap-2 bg-[#121624]/60 border border-[#1E2538]/60 rounded-lg p-2 text-[#94A3B8] text-[9.5px]">
-                    <span className="text-[10px]">📊</span>
-                    <span>Vendas</span>
+                <div className="w-[22%] border-r border-[#24242A] bg-[#111114] p-3 flex flex-col gap-4 shrink-0">
+                  {/* Search Bar with ⌘F */}
+                  <div className="flex items-center gap-2 bg-[#09090B] border border-[#24242A] rounded-[28px] px-2.5 py-1.5 w-full text-[9px] select-none">
+                    <Search className="w-3 h-3 text-[#F5F5F7] shrink-0" />
+                    <span className="text-[#F5F5F7] truncate">Pesquisar</span>
+                    <span className="ml-auto text-[7px] bg-[#111114] border border-[#24242A] px-1 py-0.5 rounded text-[#F5F5F7] shrink-0">⌘F</span>
                   </div>
                 </div>
 
                 {/* Main Panel */}
-                <div className="flex-1 p-4 flex flex-col gap-3 overflow-hidden bg-[#08090D] text-[10px] text-[#F5F5F7] select-none">
-                  
-                  {/* Top Saldo Card */}
-                  <div className="bg-[#121624] border border-[#1E2538] rounded-[14px] p-3.5 flex items-center justify-between shrink-0 shadow-sm">
-                    <div className="flex flex-col text-left">
-                      <div className="flex items-center gap-1.5 text-[#94A3B8] text-[9px]">
-                        <span>✦</span>
-                        <span>Seu saldo PIX</span>
-                      </div>
-                      <span className="font-extrabold text-[#FFFFFF] text-[18px] tracking-tight mt-0.5">R$ 8.100,00</span>
-                      <div className="flex items-center gap-2 text-[8px] text-[#3F6DF7] mt-1 font-medium">
-                        <span className="hover:underline cursor-pointer">Extrato ›</span>
-                        <span className="hover:underline cursor-pointer">Transações PIX ›</span>
-                      </div>
-                    </div>
+                <div className="flex-1 p-4 flex flex-col gap-3 overflow-hidden bg-[#09090B] text-[10px] text-[#F5F5F7] select-none">
+                  {/* Balance Display */}
+                  <div className="flex flex-col shrink-0">
+                    <span className="text-[#F5F5F7] text-[9px]">Total em vendas</span>
+                    <span className="font-bold text-[#F5F5F7] text-[16px] tracking-tight mt-0.5">R$ 8.283,35</span>
+                  </div>
 
-                    {/* PIX / Cartão Segmented Control Pill */}
-                    <div className="bg-[#08090D] border border-[#1E2538] rounded-xl p-1 flex items-center gap-1">
-                      <span className="bg-[#3F6DF7] text-white px-3 py-1 rounded-lg text-[9px] font-bold shadow-sm">PIX</span>
-                      <span className="text-[#94A3B8] px-3 py-1 rounded-lg text-[9px] font-medium">Cartão</span>
+                  {/* Filters Row */}
+                  <div className="flex items-center gap-1.5 shrink-0 text-[7px] md:text-[8px]">
+                    <span className="bg-[#3F6DF7] text-white px-3 py-1 rounded-full font-medium shadow-sm border border-[#3F6DF7]">Hoje</span>
+                    <span className="text-[#F5F5F7] hover:text-[#F5F5F7] px-3 py-1 transition-colors cursor-pointer font-medium">Ontem</span>
+                    <span className="text-[#F5F5F7] hover:text-[#F5F5F7] px-3 py-1 transition-colors cursor-pointer font-medium font-sans">Essa Semana</span>
+                    <span className="text-[#F5F5F7] hover:text-[#F5F5F7] px-3 py-1 transition-colors cursor-pointer font-medium">Esse mês</span>
+                    <span className="bg-[#111114] border border-[#24242A] text-[#F5F5F7] hover:text-[#F5F5F7] px-3 py-1.5 rounded-full ml-auto flex items-center gap-1.5 cursor-pointer transition-colors">
+                      <Calendar className="w-3 h-3 text-[#F5F5F7]" />
+                      <span>Escolher data</span>
+                    </span>
+                  </div>
+
+                  {/* Desempenho de vendas Graph Container */}
+                  <div className="bg-[#111114] border border-[#24242A] rounded-[16px] p-4 flex flex-col gap-2 flex-1 justify-between shadow-[0_0_0_1px_rgba(255,255,255,.02)]">
+                    <div className="flex items-center gap-1.5">
+                      {/* Speedometer/Chart Icon */}
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#F5F5F7]">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+                        <path d="M12 12L16 8" />
+                      </svg>
+                      <span className="font-semibold text-[#F5F5F7] text-[9px] uppercase tracking-wider">Desempenho de vendas</span>
+                    </div>
+                    
+                    {/* SVG Chart with Gridlines & Axes */}
+                    <div className="flex-1 w-full flex items-stretch gap-3 mt-2">
+                      {/* Y-Axis Labels */}
+                      <div className="flex flex-col justify-between text-[8px] text-[#F5F5F7] h-[80%] select-none pr-1">
+                        <span>500</span>
+                        <span>375</span>
+                        <span>250</span>
+                        <span>125</span>
+                        <span>0</span>
+                      </div>
+                      {/* Chart Area */}
+                      <div className="flex-1 flex flex-col justify-between relative">
+                        <div className="flex-1 w-full relative">
+                          {/* Grid Lines */}
+                          <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+                            <div className="border-b border-dashed border-[#24242A] w-full h-0" />
+                            <div className="border-b border-dashed border-[#24242A] w-full h-0" />
+                            <div className="border-b border-dashed border-[#24242A] w-full h-0" />
+                            <div className="border-b border-dashed border-[#24242A] w-full h-0" />
+                          </div>
+                          {/* SVG Curve */}
+                          <svg className="w-full h-full" viewBox="0 0 300 80" preserveAspectRatio="none">
+                            <defs>
+                              <linearGradient id="glow-desktop" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#3F6DF7" stopOpacity="0.2" />
+                                <stop offset="100%" stopColor="#3F6DF7" stopOpacity="0" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M0,62 C20,62 30,70 42.8,70 C55,70 75,60 85.7,60 C96,60 118,68 128.5,68 C139,68 160,52.5 171.4,52.5 C182,52.5 204,55 214.2,55 C224,55 246,43.75 257.1,43.75 C268,43.75 288,35 300,35" fill="none" stroke="#3F6DF7" strokeWidth="2.5" />
+                            <path d="M0,62 C20,62 30,70 42.8,70 C55,70 75,60 85.7,60 C96,60 118,68 128.5,68 C139,68 160,52.5 171.4,52.5 C182,52.5 204,55 214.2,55 C224,55 246,43.75 257.1,43.75 C268,43.75 288,35 300,35 L300,80 L0,80 Z" fill="url(#glow-desktop)" />
+                            
+                            {/* Desktop Chart Dots */}
+                            <circle cx="0" cy="62" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="42.8" cy="70" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="85.7" cy="60" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="128.5" cy="68" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="171.4" cy="52.5" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="214.2" cy="55" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="257.1" cy="43.75" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                            <circle cx="300" cy="35" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1" />
+                          </svg>
+                        </div>
+                        {/* X-Axis Labels */}
+                        <div className="flex justify-between text-[8px] text-[#F5F5F7] pt-1">
+                          <span>00:00</span>
+                          <span>02:00</span>
+                          <span>04:00</span>
+                          <span>06:00</span>
+                          <span>08:00</span>
+                          <span>10:00</span>
+                          <span>12:00</span>
+                          <span>14:00</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  {/* 4 Metric Cards Grid matching dash mobile screenshot */}
-                  <div className="grid grid-cols-2 gap-2.5 flex-1">
-                    {/* Card 1: Entradas */}
-                    <div className="bg-[#121624] border border-[#1E2538] rounded-[14px] p-3 flex flex-col justify-between text-left">
-                      <span className="text-[9.5px] text-[#94A3B8] font-semibold">Entradas</span>
-                      <div>
-                        <span className="font-extrabold text-white text-[15px] block">R$ 8.100,00</span>
-                        <span className="text-[8px] text-[#64748B] block mt-0.5">50 transações</span>
+                  {/* Bottom Metric Cards Row (Single card divided vertically) */}
+                  <div className="bg-[#111114] border border-[#24242A] rounded-[16px] p-3 grid grid-cols-2 gap-3 shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,.01)]">
+                    {/* Left Column: Pedidos feitos */}
+                    <div className="flex items-center justify-between pr-3 border-r border-[#24242A]">
+                      <div className="flex flex-col text-left">
+                        <span className="text-[9px] text-[#F5F5F7] font-semibold">Pedidos feitos</span>
+                        <span className="text-[7.5px] text-[#F5F5F7]">Todos</span>
+                        <span className="font-bold text-[#F5F5F7] text-[14px] mt-0.5">652</span>
                       </div>
+                      <span className="text-[8px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full flex items-center gap-1">
+                        <span>+12</span>
+                        <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="stroke-emerald-400">
+                          <polyline points="18 15 12 9 6 15" />
+                        </svg>
+                      </span>
                     </div>
 
-                    {/* Card 2: Saídas */}
-                    <div className="bg-[#121624] border border-[#1E2538] rounded-[14px] p-3 flex flex-col justify-between text-left">
-                      <div className="flex justify-between items-center text-[9.5px] text-[#94A3B8] font-semibold">
-                        <span>Saídas</span>
-                        <span className="text-rose-400 font-bold">↑</span>
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-white text-[15px] block">R$ 7.412,14</span>
-                        <span className="text-[8px] text-[#64748B] block mt-0.5">6 transações</span>
-                      </div>
-                    </div>
-
-                    {/* Card 3: Pendentes */}
-                    <div className="bg-[#121624] border border-[#1E2538] rounded-[14px] p-3 flex flex-col justify-between text-left">
-                      <div className="flex justify-between items-center text-[9.5px] text-[#94A3B8] font-semibold">
-                        <span>Pendentes</span>
-                        <span className="text-amber-400 font-bold">🕒</span>
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-white text-[15px] block">R$ 17.272,80</span>
-                        <span className="text-[8px] text-[#64748B] block mt-0.5">213 transações</span>
-                      </div>
-                    </div>
-
-                    {/* Card 4: Reembolsos */}
-                    <div className="bg-[#121624] border border-[#1E2538] rounded-[14px] p-3 flex flex-col justify-between text-left">
-                      <div className="flex justify-between items-center text-[9.5px] text-[#94A3B8] font-semibold">
-                        <span>Reembolsos</span>
-                        <span className="text-[#3F6DF7] font-bold">🔄</span>
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-white text-[15px] block">R$ 0,00</span>
-                        <span className="text-[8px] text-[#64748B] block mt-0.5">0 transações</span>
+                    {/* Right Column: Pedidos pagos */}
+                    <div className="flex items-center justify-between pl-3">
+                      <div className="flex flex-col text-left">
+                        <span className="text-[9px] text-[#F5F5F7] font-semibold">Pedidos pagos</span>
+                        <span className="text-[7.5px] text-[#F5F5F7]">Todos</span>
+                        <span className="font-bold text-[#F5F5F7] text-[14px] mt-0.5">231</span>
                       </div>
                     </div>
                   </div>
-
                 </div>
+
               </div>
             </div>
 
             {/* 2. Phone Mockup (In the foreground, perfectly straight, centered-left overlay, bottom-aligned on desktop) */}
             <div className="absolute lg:bottom-[15%] left-[-5%] bottom-[0px] w-[40%] max-w-[240px] aspect-[9/19] bg-[#111114] rounded-[36px] shadow-[0_25px_65px_rgba(0,0,0,0.85)] p-[6px] flex flex-col z-10">
               {/* Phone Screen Inner */}
-              <div className="w-full h-full bg-[#09090B] rounded-[30px] overflow-hidden relative flex flex-col justify-between select-none">
-                <img 
-                  src="/dash mobile.png" 
-                  alt="Asset Mobile Dashboard" 
-                  className="w-full h-full object-cover object-top" 
-                />
+              <div className="w-full h-full bg-[#09090B] rounded-[30px] overflow-hidden flex flex-col justify-between p-3 select-none">
+                
+                {/* Dynamic Island Notch (Super Minimalist Pill) */}
+                <div className="w-[68px] h-[14px] bg-[#111114] rounded-full mx-auto mb-2 relative flex items-center justify-center shrink-0">
+                  <div className="absolute right-3.5 w-1 h-1 bg-[#1a1a2e] rounded-full opacity-60" />
+                </div>
+
+                {/* Status Bar / Navbar */}
+                <div className="flex items-center justify-between px-2 shrink-0">
+                  <div className="flex items-center gap-1.5">
+                    <Menu className="w-3.5 h-3.5 text-[#F5F5F7] stroke-[2px]" />
+                    {/* Centered logo icon + text */}
+                    <div className="flex items-center gap-1">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#F5F5F7]">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                      </svg>
+                      <span className="text-[10px] font-bold text-[#F5F5F7]">Dashboard</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HelpCircle className="w-3.5 h-3.5 text-[#F5F5F7] stroke-[2px]" />
+                    <Bell className="w-3.5 h-3.5 text-[#F5F5F7] stroke-[2px]" />
+                  </div>
+                </div>
+
+                {/* Balance */}
+                <div className="px-2 mt-3 flex items-center justify-between shrink-0">
+                  <div className="flex flex-col text-left">
+                    <span className="text-[#F5F5F7] text-[9px]">Total em vendas</span>
+                    <span className="font-bold text-[#F5F5F7] text-[15px] tracking-tight mt-0.5">R$ 8.283,35</span>
+                  </div>
+                  <ChevronRight className="w-3.5 h-3.5 text-[#F5F5F7] shrink-0" />
+                </div>
+
+                {/* Segmented Controls */}
+                <div className="px-2 mt-3 grid grid-cols-4 gap-1 text-center shrink-0">
+                  {['Hoje', 'Ontem', 'Essa semana', 'Esse mês'].map((tab) => (
+                    <button 
+                      key={tab}
+                      onClick={() => setActiveTab(tab)}
+                      className={`py-1 text-[8px] font-semibold rounded-full transition-all duration-250 ease-premium ${
+                        activeTab === tab 
+                          ? 'bg-[#3F6DF7] text-[#F5F5F7]' 
+                          : 'bg-[#111114] border border-[#24242A] text-[#F5F5F7] hover:text-[#F5F5F7]'
+                      }`}
+                    >
+                      {tab}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Mobile Graph (Sparkline style: no axis or gridlines) */}
+                <div className="px-1 flex-1 flex flex-col justify-end min-h-[90px] mt-4 relative">
+                  <svg className="w-full h-full min-h-[80px]" viewBox="0 0 200 80" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="glow-mobile" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#3F6DF7" stopOpacity="0.25" />
+                        <stop offset="100%" stopColor="#3F6DF7" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,62 C13.3,62 20,70 28.5,70 C36.6,70 50,60 57.1,60 C64,60 78.6,68 85.7,68 C92.6,68 106.6,52.5 114.2,52.5 C121.3,52.5 136,55 142.8,55 C149.3,55 164,43.75 171.4,43.75 C178.6,43.75 192,35 200,35" fill="none" stroke="#3F6DF7" strokeWidth="2.5" />
+                    <path d="M0,62 C13.3,62 20,70 28.5,70 C36.6,70 50,60 57.1,60 C64,60 78.6,68 85.7,68 C92.6,68 106.6,52.5 114.2,52.5 C121.3,52.5 136,55 142.8,55 C149.3,55 164,43.75 171.4,43.75 C178.6,43.75 192,35 200,35 L200,80 L0,80 Z" fill="url(#glow-mobile)" />
+                    
+                    {/* Points on the curve */}
+                    <circle cx="0" cy="62" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="28.5" cy="70" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="57.1" cy="60" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="85.7" cy="68" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="114.2" cy="52.5" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="142.8" cy="55" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="171.4" cy="43.75" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                    <circle cx="200" cy="35" r="3.5" fill="#3F6DF7" stroke="#09090B" strokeWidth="1.5" />
+                  </svg>
+                </div>
+
+                {/* Stacked Metric Cards List (Pedidos feitos on top of Pedidos pagos) */}
+                <div className="flex flex-col gap-1.5 px-1 mt-3 shrink-0">
+                  {/* Top Card: Pedidos feitos */}
+                  <div className="bg-[#111114] border border-[#24242A] rounded-[12px] p-2.5 flex items-center justify-between shadow-[0_0_0_1px_rgba(255,255,255,.01)]">
+                    <div className="flex flex-col text-left">
+                      <span className="text-[9px] text-[#F5F5F7] font-semibold leading-tight">Pedidos feitos</span>
+                      <span className="text-[7.5px] text-[#F5F5F7]">Todos</span>
+                      <span className="font-bold text-[#F5F5F7] text-[11px] mt-0.5">652</span>
+                    </div>
+                    <span className="text-[7.5px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+                      <span>+12</span>
+                      <svg width="6.5" height="6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="stroke-emerald-400">
+                        <polyline points="18 15 12 9 6 15" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  {/* Bottom Card: Pedidos pagos */}
+                  <div className="bg-[#111114] border border-[#24242A] rounded-[12px] p-2.5 flex items-center justify-between shadow-[0_0_0_1px_rgba(255,255,255,.01)]">
+                    <div className="flex flex-col text-left">
+                      <span className="text-[9px] text-[#F5F5F7] font-semibold leading-tight">Pedidos pagos</span>
+                      <span className="text-[7.5px] text-[#F5F5F7]">Todos</span>
+                      <span className="font-bold text-[#F5F5F7] text-[11px] mt-0.5">231</span>
+                    </div>
+                    <span className="text-[7.5px] font-bold text-rose-400 bg-rose-500/10 px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+                      <span>-04</span>
+                      <svg width="6.5" height="6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="stroke-rose-400">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bottom Tab Bar */}
+                <div className="flex items-center justify-between border-t border-[#24242A] pt-2 px-2 mt-3 shrink-0">
+                  <div className="flex flex-col items-center gap-0.5 text-[#3F6DF7] cursor-pointer">
+                    <TrendingUp className="w-3.5 h-3.5 stroke-[2px]" />
+                    <span className="text-[7px] font-medium leading-none">Dash</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5 text-[#F5F5F7] hover:text-[#F5F5F7] transition-colors cursor-pointer">
+                    <DollarSign className="w-3.5 h-3.5 stroke-[2px]" />
+                    <span className="text-[7px] font-medium leading-none">Saldo</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5 text-[#F5F5F7] hover:text-[#F5F5F7] transition-colors cursor-pointer">
+                    <ShoppingBag className="w-3.5 h-3.5 stroke-[2px]" />
+                    <span className="text-[7px] font-medium leading-none">Produtos</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5 text-[#F5F5F7] hover:text-[#F5F5F7] transition-colors cursor-pointer">
+                    <Settings className="w-3.5 h-3.5 stroke-[2px]" />
+                    <span className="text-[7px] font-medium leading-none">Ajustes</span>
+                  </div>
+                </div>
+
+                {/* Home Indicator Bar */}
+                <div className="w-[35%] h-[4px] bg-[#F5F5F7]/30 rounded-full mx-auto mt-2 shrink-0" />
+
               </div>
             </div>
 
@@ -828,7 +993,7 @@ function App() {
             className="max-w-[1176px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-8 relative z-10">
             {/* Left Column: Title & Subtitle */}
             <motion.div variants={fadeUp} className="flex flex-col items-start text-left max-w-[700px]">
-              <h2 className="text-[32px] md:text-[42px] font-normal text-[#F5F5F7] tracking-tight leading-tight mb-4">
+              <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-4">
                 <span>Suas vendas merecem</span>
                 <span className="block mt-2 text-shine font-normal">mais velocidade.</span>
               </h2>
@@ -878,7 +1043,7 @@ function App() {
 
               
               {/* Title */}
-              <motion.h2 variants={fadeUp} className="text-[32px] md:text-[42px] font-normal text-[#F5F5F7] tracking-tight leading-tight mb-5">
+              <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-5">
                 <span>Tecnologia pensada para</span>
                 <span className="block mt-1 text-shine font-normal">performance e estabilidade.</span>
               </motion.h2>
@@ -1349,7 +1514,7 @@ function App() {
           className="w-full bg-[#09090B] border-b border-[#24242A] px-6 md:px-[52px] py-20 md:py-28 flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 relative z-20">
           {/* Left Column: Heading */}
           <motion.div variants={fadeUp} className="flex-1 text-left max-w-[500px]">
-            <h2 className="text-[36px] md:text-[46px] font-normal text-[#F5F5F7] tracking-tight leading-tight">
+            <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08]">
               Venda hoje. Receba com{" "}
               <span className="relative inline-block px-1.5 font-normal">
                 previsibilidade.
@@ -1654,7 +1819,7 @@ function App() {
             viewport={vp}
             
             className="flex flex-col items-center mb-16 relative z-10">
-            <motion.h2 variants={fadeUp} className="text-[32px] md:text-[40px] font-normal text-[#F5F5F7] text-center max-w-[650px] mx-auto tracking-tight leading-tight mb-4">
+            <motion.h2 variants={fadeUp} className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] text-center max-w-[720px] mx-auto tracking-tight leading-[1.08] mb-4">
               Performance que vira reconhecimento.
             </motion.h2>
             <motion.p variants={fadeUp} className="text-[14px] md:text-[15px] text-[#F5F5F7] text-center max-w-[580px] mx-auto leading-relaxed">
@@ -2082,7 +2247,7 @@ function App() {
 
 
               {/* Title */}
-              <h2 className="text-[32px] md:text-[40px] font-normal text-[#F5F5F7] tracking-tight leading-tight mb-6">
+              <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-6">
                 Seu negócio não para.
                 <span className="block text-shine font-normal mt-1">A gente também não.</span>
               </h2>
@@ -2119,7 +2284,7 @@ function App() {
             
             {/* Left Column: FAQ Copy */}
             <motion.div variants={fadeUp} className="flex flex-col text-left items-start lg:sticky lg:top-24">
-              <h2 className="text-[32px] md:text-[40px] font-normal text-[#F5F5F7] tracking-tight leading-tight mb-6">
+              <h2 className="text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08] mb-6">
                 Perguntas <span className="text-shine font-normal">Frequentes.</span>
               </h2>
               <p className="text-[14px] md:text-[15.5px] text-[#F5F5F7] leading-relaxed">
