@@ -1949,8 +1949,15 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className="w-7 h-7 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[13.5px] select-none shadow-sm">
-                        A
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border select-none shadow-sm ${
+                        dep.bg.includes('#3F6DF7') 
+                          ? 'bg-[#3F6DF7] border-white/40' 
+                          : 'bg-[#F5F5F7] border-[#3F6DF7]/40'
+                      }`}>
+                        <svg width="15" height="15" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 5L26 15H20L16 11L12 15H6L16 5Z" fill={dep.bg.includes('#3F6DF7') ? "#FFFFFF" : "#09090B"} />
+                          <path d="M16 15L26 25H20L16 21L12 25H6L16 15Z" fill={dep.bg.includes('#3F6DF7') ? "#FFFFFF" : "#3F6DF7"} />
+                        </svg>
                       </div>
                       <div className="flex flex-col text-left leading-tight">
                         <span className="text-[#F5F5F7] font-semibold text-[14px]">{dep.name}</span>
@@ -2062,8 +2069,15 @@ function App() {
                   <div>
                     {/* User Profile info */}
                     <div className="flex items-center gap-3.5 mb-4">
-                      <div className="w-7 h-7 rounded-lg bg-[#3F6DF7] border-2 border-white flex items-center justify-center shrink-0 font-sans font-black text-white text-[13.5px] select-none shadow-sm">
-                        A
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border select-none shadow-sm ${
+                        dep.bg.includes('#3F6DF7') 
+                          ? 'bg-[#3F6DF7] border-white/40' 
+                          : 'bg-[#F5F5F7] border-[#3F6DF7]/40'
+                      }`}>
+                        <svg width="15" height="15" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 5L26 15H20L16 11L12 15H6L16 5Z" fill={dep.bg.includes('#3F6DF7') ? "#FFFFFF" : "#09090B"} />
+                          <path d="M16 15L26 25H20L16 21L12 25H6L16 15Z" fill={dep.bg.includes('#3F6DF7') ? "#FFFFFF" : "#3F6DF7"} />
+                        </svg>
                       </div>
                       <div className="flex flex-col text-left leading-tight">
                         <span className="text-[#F5F5F7] font-semibold text-[14px]">{dep.name}</span>
